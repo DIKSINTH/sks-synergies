@@ -1,51 +1,43 @@
 import React from "react";
+import sample from "../../public/images/sample.jpg";
 
 // --- Placeholder Industry Data (With Lorem Ipsum Names) ---
 const industrySegments = [
   {
     name: "LOREM IPSUM",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547844033-02f5a54f19b8?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "DOLOR SIT AMET",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544778393-27a3c301c233?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "CONSECTETUR",
-    imageUrl:
-      "https://images.unsplash.com/photo-1511210985223-1d09e535e691?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "ADIPISICING ELIT",
-    imageUrl:
-      "https://images.unsplash.com/photo-1560731478-f682894548c2?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "SED DO EIUSMOD",
-    imageUrl:
-      "https://images.unsplash.com/photo-1546738918-051187441112?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "TEMPOR INCIDIDUNT",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541888946761-b54199c90538?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "UT LABORE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1524334316315-998845e20790?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "ET DOLORE",
-    imageUrl:
-      "https://images.unsplash.com/photo-1514787050186-5d63f25c739f?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
   {
     name: "MAGNA ALIQUA",
-    imageUrl:
-      "https://images.unsplash.com/photo-1558223637-299f2b3e8e97?auto=format&fit=crop&w=800&q=80",
+    imageUrl: sample,
   },
 ];
 

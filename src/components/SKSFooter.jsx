@@ -38,7 +38,7 @@ const SKSFooter = () => {
           <div className="flex flex-col space-y-6">
             {/* SKS Synergies Logo - Using text for now. Replace with img tag if you have an SVG/PNG */}
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-gray-800">
+              <span className="text-2xl font-bold text-blue-800">
                 SKS SYNERGIES
               </span>
               {/* If you have an image logo, replace the above span with: */}
@@ -49,28 +49,28 @@ const SKSFooter = () => {
             <div className="flex flex-col space-y-3 mt-4">
               <a
                 href="#"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="flex items-center text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 <FacebookIcon />
                 <span>Facebook</span>
               </a>
               <a
                 href="#"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="flex items-center text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 <InstagramIcon />
                 <span>Instagram</span>
               </a>
               <a
                 href="#"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="flex items-center text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 <LinkedInIcon />
                 <span>LinkedIn</span>
               </a>
               <a
                 href="#"
-                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="flex items-center text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 <YouTubeIcon />
                 <span>YouTube</span>
@@ -86,19 +86,25 @@ const SKSFooter = () => {
             <div className="flex flex-col space-y-3">
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 Products
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 Services
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 About us
               </a>
@@ -107,19 +113,19 @@ const SKSFooter = () => {
 
           {/* Column 3: Contact Information (Phone/Email) */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 border-b-2 border-gray-800 pb-1 w-fit hidden lg:block invisible">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 border-b-2 border-blue-800 pb-1 w-fit hidden lg:block invisible">
               {/* Invisible header to align with "Let's connect" for desktop, but hidden on mobile */}
             </h3>
             <div className="flex flex-col space-y-3">
               <a
                 href="tel:+6584963414"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 +65 8496 3414
               </a>
               <a
                 href="mailto:sales@sks-synergies.com"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
                 sales@sks-synergies.com
               </a>
@@ -128,7 +134,7 @@ const SKSFooter = () => {
 
           {/* Column 4: Address */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 border-b-2 border-gray-800 pb-1 w-fit hidden lg:block invisible">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 border-b-2 border-blue-800 pb-1 w-fit hidden lg:block invisible">
               {/* Invisible header to align with "Let's connect" for desktop, but hidden on mobile */}
             </h3>
             <address className="not-italic text-gray-600">

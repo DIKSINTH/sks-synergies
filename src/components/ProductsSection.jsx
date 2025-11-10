@@ -1,33 +1,30 @@
 import React from "react";
+import sample from "../../public/images/sample.jpg";
 
 // --- Sample Product Data (Limited to 4 for this view) ---
 const products = [
   {
     id: 1,
     name: "Lorem Ipsum Dolor Sit Amet Consectetur - Series A",
-    imageUrl:
-      "https://images.unsplash.com/photo-1542395669-e093bb222533?auto=format&fit=crop&w=600&h=400&q=80",
+    imageUrl: { sample },
     link: "/products/product-a",
   },
   {
     id: 2,
     name: "Sed Do Eiusmod Tempor Incididunt Ut Labore - Series B",
-    imageUrl:
-      "https://images.unsplash.com/photo-1594770135899-7f938c86d34b?auto=format&fit=crop&w=600&h=400&q=80",
+    imageUrl: { sample },
     link: "/products/product-b",
   },
   {
     id: 3,
     name: "Ut Enim Ad Minim Veniam Quis Nostrud Exercitation",
-    imageUrl:
-      "https://images.unsplash.com/photo-1557876882-7f938c86d34b?auto=format&fit=crop&w=600&h=400&q=80",
+    imageUrl: { sample },
     link: "/products/product-c",
   },
   {
     id: 4,
     name: "Duis Aute Irure Dolor In Reprehenderit In Voluptate",
-    imageUrl:
-      "https://images.unsplash.com/photo-1581093458944-67cf0d7ab1df?auto=format&fit=crop&w=600&h=400&q=80",
+    imageUrl: { sample },
     link: "/products/product-d",
   },
 ];
@@ -92,7 +89,7 @@ const ProductsSection = () => {
             >
               <div className="relative aspect-video bg-gray-200">
                 <img
-                  src={product.imageUrl}
+                  src={sample}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                 />
@@ -119,11 +116,11 @@ const ProductsSection = () => {
             href="/products" // This will redirect to a /products page
             className="inline-flex items-center justify-center 
                        px-10 py-4 
-                       text-base font-medium text-teal-700 
+                       text-base font-medium text-blue-700 
                        bg-white 
-                       border-2 border-teal-700 
+                       border-2 border-blue-700 
                        rounded-full 
-                       hover:bg-teal-700 hover:text-white 
+                       hover:bg-blue-700 hover:text-white 
                        transition duration-300 whitespace-nowrap"
           >
             EXPLORE MORE PRODUCTS →

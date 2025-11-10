@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import sample from "../../public/images/sample.jpg";
 
 // --- Sample Data for Services Accordion (Corrected for images on all items) ---
 const services = [
@@ -236,7 +237,7 @@ const ServicesAccordion = () => {
                         className="w-full sm:w-1/3 aspect-video bg-gray-200 rounded-xl overflow-hidden shadow-md"
                       >
                         <img
-                          src={imgSrc}
+                          src={sample}
                           alt={`Service image ${imgIdx + 1}`}
                           className="w-full h-full object-cover"
                         />

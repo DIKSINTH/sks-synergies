@@ -1,7 +1,5 @@
 import React from "react";
-
-const sampleImageUrl =
-  "http://googleusercontent.com/image_collection/image_retrieval/16373965021365995076";
+import sample from "../../public/images/sample.jpg";
 
 const PlumbingExcellenceSection = () => {
   return (
@@ -85,7 +83,7 @@ const PlumbingExcellenceSection = () => {
           <div className="md:col-span-1 lg:col-span-5 mt-10 md:mt-0">
             <div className="relative overflow-hidden rounded-xl shadow-2xl h-full min-h-[300px]">
               <img
-                src={sampleImageUrl}
+                src={sample}
                 alt="Placeholder visual"
                 className="w-full h-full object-cover"
               />
