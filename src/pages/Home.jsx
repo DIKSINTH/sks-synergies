@@ -3,6 +3,7 @@ import Header from "../components/Header.jsx";
 import SustainableFutureSection from "../components/SustainableFutureSection.jsx";
 import ImageSlider from "../components/ImageSlider.jsx";
 import ClientLogosSection from "../components/ClientLogosSection.jsx";
+import PlumbingExcellenceSection from "../components/PlumbingExcellenceSection.jsx";
 function Home() {
   return (
     <div>
@@ -10,6 +11,7 @@ function Home() {
       <SustainableFutureSection />
       <ImageSlider />
       <ClientLogosSection />
+      <PlumbingExcellenceSection />
     </div>
   );
 }
