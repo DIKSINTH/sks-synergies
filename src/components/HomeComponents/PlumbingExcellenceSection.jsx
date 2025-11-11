@@ -1,12 +1,21 @@
 import React from "react";
 import sample from "../../../public/images/sample.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const PlumbingExcellenceSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+  }, []);
   return (
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* HEADER TAG */}
-        <p className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-2">
+        <p
+          className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-2"
+          data-aos="fade-right"
+        >
           Lorem Ipsum
         </p>
 
@@ -16,6 +25,7 @@ const PlumbingExcellenceSection = () => {
           font-extrabold leading-tight 
           text-[#1b2134] 
           mb-12"
+          data-aos="fade-right"
         >
           Lorem ipsum dolor sit amet <br />
           consectetur adipiscing elit
@@ -24,7 +34,10 @@ const PlumbingExcellenceSection = () => {
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16">
           {/* TEXT AREA */}
-          <div className="md:col-span-2 lg:col-span-7 flex flex-col justify-between">
+          <div
+            className="md:col-span-2 lg:col-span-7 flex flex-col justify-between"
+            data-aos="fade-right"
+          >
             {/* STATS */}
             <div className="flex space-x-12 mb-8">
               <div>
@@ -80,7 +93,10 @@ const PlumbingExcellenceSection = () => {
           </div>
 
           {/* IMAGE */}
-          <div className="md:col-span-1 lg:col-span-5 mt-10 md:mt-0">
+          <div
+            className="md:col-span-1 lg:col-span-5 mt-10 md:mt-0"
+            data-aos="fade-left"
+          >
             <div className="relative overflow-hidden rounded-xl shadow-2xl h-full min-h-[300px]">
               <img
                 src={sample}

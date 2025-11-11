@@ -1,5 +1,8 @@
 import React from "react";
 import sample from "../../../public/images/sample.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 // --- Sample Product Data (Limited to 4 for this view) ---
 const products = [
@@ -34,12 +37,16 @@ const ProductsSection = () => {
   const featuredProducts = products.slice(0, 4);
   const totalProducts = featuredProducts.length; // Now correctly 4
 
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+  }, []);
+
   return (
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Top Section: Header and Description */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
-          <div className="w-full">
+          <div className="w-full" data-aos="fade-right">
             <p className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-2">
               LOREM IPSUM
             </p>

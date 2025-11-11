@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const logos = [
   {
@@ -57,6 +59,10 @@ const ClientLogosSection = () => {
   const scrollSpeed = 0.5;
 
   useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+  }, []);
+
+  useEffect(() => {
     const scrollElement = scrollRef.current;
     let animationFrameId;
     let currentScroll = 0;
@@ -81,7 +87,10 @@ const ClientLogosSection = () => {
   return (
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1b2134] mb-12 sm:mb-16 lg:mb-20">
+        <h2
+          data-aos="fade-right"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1b2134] mb-12 sm:mb-16 lg:mb-20"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ut?{" "}
           <br className="hidden sm:inline" />
           Lorem ipsum dolor sit.lorem1
