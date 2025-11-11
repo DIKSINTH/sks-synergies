@@ -1,5 +1,6 @@
 import React from "react";
-import sample from "../../public/images/sample.jpg";
+// Assuming 'sample' is a placeholder image accessible via the relative path
+import sample from "../../../public/images/sample.jpg";
 
 // --- Placeholder Industry Data (With Lorem Ipsum Names) ---
 const industrySegments = [
@@ -77,7 +78,7 @@ const IndustrySegments = () => {
           vehicula metus posuere sed.
         </p>
 
-        {/* Grid */}
+        {/* Grid Container */}
         <div className="grid grid-cols-12 gap-4 sm:gap-6 lg:gap-8">
           <IndustryCard
             {...industrySegments[0]}
@@ -101,6 +102,7 @@ const IndustrySegments = () => {
           />
           <IndustryCard
             {...industrySegments[5]}
+            // This card spans 9 columns on large screens
             className="col-span-12 sm:col-span-6 lg:col-span-9"
           />
           <IndustryCard
@@ -113,19 +115,27 @@ const IndustrySegments = () => {
           />
           <IndustryCard
             {...industrySegments[8]}
+            // This card spans 6 columns on large screens
             className="col-span-12 sm:col-span-6 lg:col-span-6"
           />
         </div>
+
+        {/* --- HORIZONTAL LINE AT THE END --- */}
+        <div className="mt-16 sm:mt-20 lg:mt-24">
+          <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
+        </div>
+        {/* ---------------------------------- */}
       </div>
     </section>
   );
 };
 
-// Card Component
+// Card Component (Divider code removed)
 const IndustryCard = ({ name, imageUrl, className }) => {
   return (
     <div
       className={`${className} relative rounded-2xl overflow-hidden cursor-pointer shadow-lg group ${
+        // Setting different heights based on the item to create the varied layout
         name === "TEMPOR INCIDIDUNT"
           ? "h-64 sm:h-80 lg:h-96"
           : "h-64 sm:h-56 lg:h-64"
@@ -141,6 +151,8 @@ const IndustryCard = ({ name, imageUrl, className }) => {
           {name}
         </h3>
       </div>
+
+      {/* Hover ring effect */}
       <div className="absolute inset-0 rounded-2xl ring-2 ring-transparent group-hover:ring-blue-500 transition duration-300"></div>
     </div>
   );

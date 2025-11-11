@@ -113,7 +113,10 @@ const ClientLogosSection = () => {
           ))}
         </div>
 
-        <hr className="border-t border-gray-400" />
+        {/* Horizontal Divider Line at the bottom (Matching image_240e24.png) */}
+        <div className="col-span-12 mt-16 sm:mt-20 lg:mt-24">
+          <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import sample from "../../public/images/sample.jpg";
+import sample from "../../../public/images/sample.jpg";
 
 const PlumbingExcellenceSection = () => {
   return (

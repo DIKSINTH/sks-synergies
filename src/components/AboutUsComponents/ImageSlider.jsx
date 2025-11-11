@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import sample from "../../public/images/sample.jpg";
+import sample from "../../../public/images/sample.jpg";
 
 // ✅ Real working construction images (Unsplash)
 const slides = [

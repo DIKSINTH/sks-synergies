@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "../components/Header.jsx";
-import ImageSlider from "../components/ImageSlider.jsx";
-import ClientLogosSection from "../components/ClientLogosSection.jsx";
-import PlumbingExcellenceSection from "../components/PlumbingExcellenceSection.jsx";
-import ProductsSection from "../components/ProductsSection.jsx";
-import ServicesHeader from "../components/ServicesHeader.jsx";
-import ServicesAccordion from "../components/ServicesAccordion.jsx";
-import IndustrySegments from "../components/IndustrySegments.jsx";
-import TestimonialSection from "../components/TestimonialSection.jsx";
-import IndustryExpertService from "../components/IndustryExpertService.jsx";
+import Header from "../components/HomeComponents/Header.jsx";
+import ImageSlider from "../components/HomeComponents/ImageSlider.jsx";
+import ClientLogosSection from "../components/HomeComponents/ClientLogosSection.jsx";
+import PlumbingExcellenceSection from "../components/HomeComponents/PlumbingExcellenceSection.jsx";
+import ProductsSection from "../components/HomeComponents/ProductsSection.jsx";
+import ServicesHeader from "../components/HomeComponents/ServicesHeader.jsx";
+import ServicesAccordion from "../components/HomeComponents/ServicesAccordion.jsx";
+import IndustrySegments from "../components/HomeComponents/IndustrySegments.jsx";
+import TestimonialSection from "../components/HomeComponents/TestimonialSection.jsx";
+import IndustryExpertService from "../components/HomeComponents/IndustryExpertService.jsx";
 import SKSFooter from "../components/SKSFooter.jsx";
 
 function Home() {

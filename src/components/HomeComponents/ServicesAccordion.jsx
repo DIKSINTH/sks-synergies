@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import sample from "../../public/images/sample.jpg";
+import sample from "../../../public/images/sample.jpg";
 
 // --- Sample Data for Services Accordion (Corrected for images on all items) ---
 const services = [
@@ -305,9 +305,9 @@ const ServicesAccordion = () => {
           </a>
         </div>
 
-        {/* Final Horizontal Divider Line */}
-        <div className="mt-16 sm:mt-20 lg:mt-24">
-          <hr className="border-t-2 border-gray-400 border-opacity-70" />
+        {/* Horizontal Divider Line at the bottom (Matching image_240e24.png) */}
+        <div className="col-span-12 mt-16 sm:mt-20 lg:mt-24">
+          <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
         </div>
       </div>
     </section>

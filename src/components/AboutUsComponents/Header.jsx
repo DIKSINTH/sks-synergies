@@ -104,7 +104,7 @@ const NavigationBar = () => {
         <a href="/" className="hover:text-blue-600 transition">
           Home
         </a>
-        <a href="#about" className="hover:text-blue-600 transition">
+        <a href="/about" className="hover:text-blue-600 transition">
           About Us
         </a>
         <a href="#products" className="hover:text-blue-600 transition">

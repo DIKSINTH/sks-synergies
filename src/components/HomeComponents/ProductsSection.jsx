@@ -1,5 +1,5 @@
 import React from "react";
-import sample from "../../public/images/sample.jpg";
+import sample from "../../../public/images/sample.jpg";
 
 // --- Sample Product Data (Limited to 4 for this view) ---
 const products = [
@@ -127,9 +127,9 @@ const ProductsSection = () => {
           </a>
         </div>
 
-        {/* Horizontal Line at the bottom */}
-        <div className="mt-16 sm:mt-20 lg:mt-24">
-          <hr className="border-t border-gray-400" />
+        {/* Horizontal Divider Line at the bottom (Matching image_240e24.png) */}
+        <div className="col-span-12 mt-16 sm:mt-20 lg:mt-24">
+          <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
         </div>
       </div>
     </section>
