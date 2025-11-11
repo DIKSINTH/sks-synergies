@@ -92,37 +92,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Hero / Title area */}
-      <div className="bg-neutral-50">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 py-10 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
-          {/* Title */}
-          <div className="lg:col-span-7">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1b2134] leading-tight">
-              We are
-              <br />
-              Building a
-              <br />
-              Sustainable Future
-            </h1>
-          </div>
-
-          {/* Description */}
-          <div className="lg:col-span-5 flex items-start lg:items-center">
-            <p className="text-base sm:text-lg text-gray-700 font-light leading-relaxed max-w-md pt-4 lg:pt-0">
-              We are dedicated to creating a sustainable future by offering
-              eco-friendly plumbing and installation solutions. Our focus is on
-              reducing environmental impact while delivering reliable,
-              long-lasting services.
-            </p>
-          </div>
-
-          {/* Divider */}
-          <div className="col-span-1 lg:col-span-12 mt-8 lg:mt-12">
-            <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
-          </div>
-        </div>
-      </div>
-
       {/* Mobile navigation panel (sliding) */}
       <MobilePanel open={mobileOpen} onClose={() => setMobileOpen(false)} />
 

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "1",
+    "slug": "epoxy-resin-pump",
+    "category": "Centrifugal Pumps",
+    "title": "Epoxy Resin Pump",
+    "shortDescription": "The FRP process pump is made from fiber-reinforced plastic, designed to handle corrosive fluids in chemical and process industries.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": [
+      "/images/sample.jpg",
+      "/images/sample-2.jpg",
+      "/images/sample-3.jpg"
+    ],
+    "keySpecifications": {
+      "Flow Rate": "1000 m³/hr",
+      "Pressure": "20 Bar",
+      "Ports": "1\" to 6\""
+    },
+    "features": [
+      "Dynamically balanced impellers",
+      "External impeller adjustment",
+      "Fully open impeller",
+      "Oil lubricated ball bearings",
+      "Back pull-out design"
+    ],
+    "construction": {
+      "Alignment": "Horizontal",
+      "Materials": "FRP",
+      "Seal": "Packing / Mechanical seal",
+      "Flushing Plan": "Standard"
+    },
+    "performance": {
+      "Max Capacity": "1200 m³/hr",
+      "Max Head": "180 m",
+      "Max Temperature": "+200°C"
+    }
+  },
+  {
+    "id": "2",
+    "slug": "screw-pump-fl-ef",
+    "category": "Centrifugal Pumps",
+    "title": "Screw Pump with Floating Stator – FL-EF Series",
+    "shortDescription": "Engineered for delicate, high-value liquids; smooth, pulse-free transfer for wineries, juice makers and edible-oil plants.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": [
+      "/images/sample.jpg",
+      "/images/sample-2.jpg",
+      "/images/sample-4.jpg"
+    ],
+    "keySpecifications": {
+      "Pump Type": "Progressive-cavity screw pump",
+      "Flow Rate": "up to 8 m³/h",
+      "Pressure": "up to 5 bar",
+      "Compliance": "CE, FDA, ATEX, UKCA"
+    },
+    "features": [
+      "Floating stator minimises wear",
+      "Low-shear, pulse-free flow",
+      "Hygienic AISI 316 construction",
+      "Optional trolley platform for mobility"
+    ],
+    "construction": {
+      "Rotor": "Precision-machined AISI 316 SS",
+      "Stator": "Food-grade nitrile elastomer",
+      "Housing": "Smooth, crevice-free housing"
+    },
+    "performance": {
+      "Capacity Range": "0.1 – 8 m³/h",
+      "Differential Pressure": "up to 5 bar",
+      "NPSH": "Low"
+    }
+  },
+  {
+    "id": "3",
+    "slug": "industrial-water-pump",
+    "category": "Centrifugal Pumps",
+    "title": "Industrial Water Pump",
+    "shortDescription": "High capacity industrial water transfer pump for process plants and utilities.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "800 m³/hr", "Pressure": "16 Bar" },
+    "features": ["High capacity", "Robust construction"],
+    "construction": { "Materials": "Carbon steel", "Alignment": "Horizontal" },
+    "performance": { "Max Capacity": "900 m³/hr" }
+  },
+  {
+    "id": "4",
+    "slug": "chemical-process-pump",
+    "category": "Centrifugal Pumps",
+    "title": "Chemical Process Pump",
+    "shortDescription": "Anti-corrosive pump for chemical industry applications.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "950 m³/hr", "Pressure": "18 Bar" },
+    "features": ["Anti-corrosive coatings", "High temp rating"],
+    "construction": { "Materials": "Alloy/FRP" },
+    "performance": { "Max Temperature": "+180°C" }
+  },
+  {
+    "id": "5",
+    "slug": "screw-pump-fl-erb",
+    "category": "Positive Displacement Pumps",
+    "title": "Stainless Steel Screw Pump – FL-ERB Series",
+    "shortDescription": "Sanitary stainless steel screw pump ideal for food and pharma.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "300 m³/hr", "Pressure": "8 Bar" },
+    "features": ["Sanitary design", "Easy to clean"],
+    "construction": { "Materials": "Stainless Steel" },
+    "performance": { "Max Capacity": "350 m³/hr" }
+  },
+  {
+    "id": "6",
+    "slug": "screw-pump-fl-erby",
+    "category": "Positive Displacement Pumps",
+    "title": "Screw Pump with Bypass – FL-ERBY Series",
+    "shortDescription": "Screw pump with bypass option for controlled flow handling.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "400 m³/hr", "Pressure": "12 Bar" },
+    "features": ["Bypass valve", "Robust construction"],
+    "construction": { "Materials": "Steel" },
+    "performance": { "Max Capacity": "450 m³/hr" }
+  },
+  {
+    "id": "7",
+    "slug": "epoxy-resin-pump-compact",
+    "category": "Centrifugal Pumps",
+    "title": "Epoxy Resin Pump — Compact",
+    "shortDescription": "Smaller footprint FRP pump for light duty chemical transfer.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg", "/images/sample-3.jpg"],
+    "keySpecifications": { "Flow Rate": "250 m³/hr", "Pressure": "10 Bar" },
+    "features": ["Compact", "Lightweight"],
+    "construction": { "Materials": "FRP" },
+    "performance": { "Max Capacity": "260 m³/hr" }
+  },
+  {
+    "id": "8",
+    "slug": "vacuum-booster-pump",
+    "category": "Vacuum Pumps",
+    "title": "Vacuum Booster Pump",
+    "shortDescription": "High suction vacuum pump for industrial systems.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Max Vacuum": "0.01 mbar" },
+    "features": ["High suction capability"],
+    "construction": { "Materials": "Steel" },
+    "performance": { "Capacity": "Varies" }
+  },
+  {
+    "id": "9",
+    "slug": "oil-lubricated-vacuum-pump",
+    "category": "Vacuum Pumps",
+    "title": "Oil Lubricated Vacuum Pump",
+    "shortDescription": "Reliable vacuum pump for continuous operation.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Capacity": "350 m³/hr" },
+    "features": ["Continuous operation capability"],
+    "construction": { "Materials": "Cast iron" },
+    "performance": { "Max Capacity": "350 m³/hr" }
+  },
+  {
+    "id": "10",
+    "slug": "pharma-transfer-pump",
+    "category": "Hygiene Pumps",
+    "title": "Pharma Transfer Pump",
+    "shortDescription": "Aseptic pump designed for pharmaceutical liquid transfer.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "120 m³/hr" },
+    "features": ["Aseptic design"],
+    "construction": { "Materials": "316L Stainless" },
+    "performance": { "Max Capacity": "120 m³/hr" }
+  },
+  {
+    "id": "11",
+    "slug": "bitumen-hot-oil-pump",
+    "category": "Skid Packages",
+    "title": "Bitumen Hot Oil Pump Skid Unit",
+    "shortDescription": "Pre-assembled hot oil skid package for industrial plants.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "150 m³/hr" },
+    "features": ["Skid mounted", "Insulated piping"],
+    "construction": { "Materials": "Steel" },
+    "performance": { "Max Temperature": "+250°C" }
+  },
+  {
+    "id": "12",
+    "slug": "fuel-transfer-modular-skid",
+    "category": "Skid Packages",
+    "title": "Modular Fuel Transfer Skid",
+    "shortDescription": "Turnkey skid system for diesel & fuel distribution.",
+    "heroImage": "/images/sample.jpg",
+    "gallery": ["/images/sample.jpg"],
+    "keySpecifications": { "Flow Rate": "200 m³/hr" },
+    "features": ["Modular", "Plug-and-play"],
+    "construction": { "Materials": "Carbon steel" },
+    "performance": { "Max Capacity": "200 m³/hr" }
+  }
+]

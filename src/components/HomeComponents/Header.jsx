@@ -31,17 +31,17 @@ export default function Header() {
             <a href="/about" className="hover:text-blue-600 transition">
               About Us
             </a>
-            <a href="#products" className="hover:text-blue-600 transition">
+            <a href="/products" className="hover:text-blue-600 transition">
               Products
             </a>
-            <a href="#services" className="hover:text-blue-600 transition">
+            <a href="/services" className="hover:text-blue-600 transition">
               Services
             </a>
-            <a href="#contact" className="hover:text-blue-600 transition">
+            <a href="/contact" className="hover:text-blue-600 transition">
               Contact Us
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#1b2134] bg-neutral-100 border-2 border-[#1b2134] rounded-full hover:bg-blue-200 transition duration-300"
             >
               LET'S TALK →
