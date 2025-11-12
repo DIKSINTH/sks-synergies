@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// ✅ Import your logos (replace these with actual logo paths)
+import logo1 from "../../../public/images/sample.jpg";
+import logo2 from "../../../public/images/sample.jpg";
+import logo3 from "../../../public/images/sample.jpg";
+import logo4 from "../../../public/images/sample.jpg";
+import logo5 from "../../../public/images/sample.jpg";
+import logo6 from "../../../public/images/sample.jpg";
 
 const TrustedBrands = () => {
-  // Array of dummy logo image URLs (replace with actual logo paths)
-  const logos = [
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+1", // Example: 30 Performance Oil
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+2", // Example: Energy Pipeline
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+3", // Example: Pacific Energy
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+4", // Example: SAZ
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+5", // Example: SRC
-    "https://via.placeholder.com/150x50/cccccc/000000?text=LOGO+6", // Example: WS
-  ];
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+    AOS.refresh();
+  }, []);
 
-  // Duplicate the logos to fill the grid as shown in the image
-  const allLogos = [...logos, ...logos, ...logos, ...logos.slice(0, 3)]; // Adjust slice to match the exact count if needed
+  // ✅ Each logo as a separate variable
+  const allLogos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
   return (
     <div className="font-sans bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading Section */}
-        <div className="text-center lg:text-left mb-12">
+        <div data-aos="fade-right" className="text-center lg:text-left mb-12">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
             Lorem ipsum dolor, sit amet consectetur adipisicing.{" "}
             <br className="hidden sm:inline" />
@@ -27,7 +32,10 @@ const TrustedBrands = () => {
         </div>
 
         {/* Logos Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center">
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center"
+        >
           {allLogos.map((logo, index) => (
             <div
               key={index}
@@ -42,7 +50,7 @@ const TrustedBrands = () => {
           ))}
         </div>
 
-        {/* Horizontal Divider Line at the bottom (Matching image_240e24.png) */}
+        {/* Divider */}
         <div className="col-span-12 mt-16 sm:mt-20 lg:mt-24">
           <hr className="border-t-2 border-[#1b2134] border-opacity-30" />
         </div>

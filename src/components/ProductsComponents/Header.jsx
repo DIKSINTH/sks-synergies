@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // Responsive Header + Fixed Action Buttons (single-file React component)
 // Tailwind CSS required in the project.
@@ -6,6 +8,9 @@ import React, { useState, useEffect } from "react";
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    Aos.init({ duration: 400, once: true });
+  }, []);
   return (
     <header className="bg-neutral-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +102,10 @@ export default function Header() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 py-10 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="lg:col-span-7">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1b2134] leading-tight">
+            <h1
+              data-aos="fade-right"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1b2134] leading-tight"
+            >
               We are
               <br />
               Building a
@@ -108,7 +116,10 @@ export default function Header() {
 
           {/* Description */}
           <div className="lg:col-span-5 flex items-start lg:items-center">
-            <p className="text-base sm:text-lg text-gray-700 font-light leading-relaxed max-w-md pt-4 lg:pt-0">
+            <p
+              data-aos="fade-left"
+              className="text-base sm:text-lg text-gray-700 font-light leading-relaxed max-w-md pt-4 lg:pt-0"
+            >
               We are dedicated to creating a sustainable future by offering
               eco-friendly plumbing and installation solutions. Our focus is on
               reducing environmental impact while delivering reliable,

@@ -1,6 +1,9 @@
 import React from "react";
 // Assuming 'sample' is a placeholder image accessible via the relative path
 import sample from "../../../public/images/sample.jpg";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // --- Placeholder Industry Data (With Lorem Ipsum Names) ---
 const industrySegments = [
@@ -43,15 +46,23 @@ const industrySegments = [
 ];
 
 const IndustrySegments = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+    AOS.refresh();
+  }, []);
   return (
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <p className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-2">
+        <p
+          data-aos="fade-right"
+          className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-2"
+        >
           LOREM IPSUM DOLOR
         </p>
 
         <h2
+          data-aos="fade-right"
           className="
           text-3xl sm:text-4xl lg:text-5xl 
           font-extrabold leading-tight 
@@ -63,6 +74,7 @@ const IndustrySegments = () => {
         </h2>
 
         <p
+          data-aos="fade-left"
           className="
           text-base sm:text-lg 
           text-gray-700 

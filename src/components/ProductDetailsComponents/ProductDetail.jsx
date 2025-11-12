@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../../data/products.json";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function KeyValueRow({ label, value }) {
   return (
@@ -12,6 +14,9 @@ function KeyValueRow({ label, value }) {
 }
 
 export default function ProductDetail() {
+  useEffect(() => {
+    Aos.init({ duration: 300, once: true });
+  }, []);
   const { slug } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
@@ -54,7 +59,10 @@ export default function ProductDetail() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* LEFT IMAGE GALLERY */}
-        <div className="lg:sticky lg:top-24 lg:self-start">
+        <div
+          data-aos="fade-right"
+          className="lg:sticky lg:top-24 lg:self-start"
+        >
           <div className="bg-white p-4 rounded-2xl shadow-sm">
             <img
               src={gallery[activeIndex]}
@@ -81,12 +89,15 @@ export default function ProductDetail() {
         </div>
 
         {/* RIGHT DETAILS */}
-        <div className="space-y-8">
+        <div data-aos="fade-left" className="space-y-8">
           <div>
             <div className="text-sm text-teal-600 font-medium">
               {product.category}
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">
+            <h1
+              data-aos="fade-left"
+              className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2"
+            >
               {product.title}
             </h1>
             <p className="mt-4 text-gray-600">{product.shortDescription}</p>
