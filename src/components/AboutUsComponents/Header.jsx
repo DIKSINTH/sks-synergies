@@ -198,28 +198,28 @@ function MobilePanel({ open, onClose }) {
               About Us
             </a>
             <a
-              href="#products"
+              href="/products"
               onClick={onClose}
               className="block text-gray-700 font-medium py-2"
             >
               Products
             </a>
             <a
-              href="#services"
+              href="/services"
               onClick={onClose}
               className="block text-gray-700 font-medium py-2"
             >
               Services
             </a>
             <a
-              href="#contact"
+              href="/contact"
               onClick={onClose}
               className="block text-gray-700 font-medium py-2"
             >
               Contact Us
             </a>
             <a
-              href="#contact"
+              href="/contact"
               onClick={onClose}
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#1b2134] bg-neutral-100 border-2 border-[#1b2134] rounded-full hover:bg-blue-200 transition duration-300"
             >
