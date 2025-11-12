@@ -1,22 +1,32 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ServicesHeader = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+  }, []);
+
   return (
-    // Main container with light gray background and responsive padding
+    // Main container with lsight gray background and responsive padding
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Header Content */}
-        <p className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-4">
+        <p
+          className="text-sm font-semibold tracking-widest uppercase text-gray-700 mb-4"
+          data-aos="fade-right"
+        >
           LOREM IPSUM
         </p>
 
         <h2
+          data-aos="fade-right"
           className="
-          // Responsive Heading Sizes: 4xl (mobile), 5xl (tablet), 6xl (desktop)
           text-4xl sm:text-5xl lg:text-6xl 
           font-extrabold leading-tight 
           text-[#1b2134] 
-          mb-8 // Bottom margin for the heading
+          mb-8
         "
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing{" "}
@@ -25,13 +35,14 @@ const ServicesHeader = () => {
         </h2>
 
         <p
+          data-aos="fade-left"
           className="
-          // Responsive Text Size: base (mobile), lg (tablet/desktop)
           text-base sm:text-lg 
           text-gray-700 
-          font-light // Matches the thin font weight in the image
-          leading-relaxed
-          max-w-4xl // Constrains the paragraph width, similar to the design
+          font-light 
+          leading-relaxed 
+          max-w-4xl 
+          mx-auto // centers the paragraph block
         "
         >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem

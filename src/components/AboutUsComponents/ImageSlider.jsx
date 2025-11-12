@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sample from "../../../public/images/sample.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // ✅ Real working construction images (Unsplash)
 const slides = [
@@ -28,6 +30,10 @@ const slides = [
 const ImageSlider = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const totalSlides = slides.length;
+
+  useEffect(() => {
+    AOS.init({ duration: 300, once: true });
+  }, []);
 
   // --- Auto-Play Logic ---
   useEffect(() => {
@@ -63,7 +69,10 @@ const ImageSlider = () => {
   const maxNumber = totalSlides.toString().padStart(2, "0");
 
   return (
-    <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 mt-24">
+    <div
+      className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 mt-24"
+      data-aos="fade-up"
+    >
       <div className="relative w-full overflow-hidden rounded-xl shadow-lg aspect-video">
         <img
           src={slides[currentSlideIndex].url}

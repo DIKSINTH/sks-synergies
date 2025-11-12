@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import sample from "../../../public/images/sample.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 // --- Sample Data for Services Accordion (Corrected for images on all items) ---
 const services = [
@@ -124,6 +127,9 @@ const services = [
 
 const ServicesAccordion = () => {
   const [openServiceId, setOpenServiceId] = useState(null);
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+  }, []);
 
   const toggleService = (id) => {
     setOpenServiceId(openServiceId === id ? null : id);
@@ -165,7 +171,7 @@ const ServicesAccordion = () => {
 
   return (
     <section className="bg-neutral-50 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto" data-aos="fade-right">
         {services.map((service, index) => (
           <div key={service.id} className="mb-4 sm:mb-6">
             <div

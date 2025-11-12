@@ -1,56 +1,57 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import sample from "../../../public/images/sample.jpg";
 
 const logos = [
   {
     id: 1,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+A",
+    url: sample,
   },
   {
     id: 2,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+B",
+    url: sample,
   },
   {
     id: 3,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+C",
+    url: sample,
   },
   {
     id: 4,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+D",
+    url: sample,
   },
   {
     id: 5,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+E",
+    url: sample,
   },
   {
     id: 6,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+F",
+    url: sample,
   },
   {
     id: 7,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+G",
+    url: sample,
   },
   {
     id: 8,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+H",
+    url: sample,
   },
   // duplicated for infinite scroll
   {
     id: 9,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+A",
+    url: sample,
   },
   {
     id: 10,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+B",
+    url: sample,
   },
   {
     id: 11,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+C",
+    url: sample,
   },
   {
     id: 12,
-    url: "https://via.placeholder.com/150x80/cccccc/808080?text=Logo+D",
+    url: sample,
   },
 ];
 
