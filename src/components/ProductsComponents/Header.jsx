@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    Aos.init({ duration: 400, once: true });
+    Aos.init({ duration: 1000, once: true });
   }, []);
   return (
     <header className="bg-neutral-50 relative">

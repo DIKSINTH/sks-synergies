@@ -4,6 +4,7 @@ import productsData from "../../data/products.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+// ✅ Small reusable row component
 function KeyValueRow({ label, value }) {
   return (
     <div className="flex justify-between border-b border-gray-100 py-2 text-sm">
@@ -13,14 +14,78 @@ function KeyValueRow({ label, value }) {
   );
 }
 
+// ✅ Recommendation Section
+function RecommendationSection({ currentProduct, allProducts }) {
+  const navigate = useNavigate();
+
+  if (!currentProduct || !Array.isArray(allProducts)) return null;
+
+  // Filter same category but exclude the current product
+  const relatedProducts = allProducts.filter(
+    (p) => p.category === currentProduct.category && p.id !== currentProduct.id
+  );
+
+  if (relatedProducts.length === 0) return null;
+
+  return (
+    <section className="bg-gray-50 py-16 px-4 sm:px-10 lg:px-20">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h4 className="text-sm font-semibold text-gray-500 uppercase">
+            Recommended
+          </h4>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mt-2">
+            You May Also Like
+          </h2>
+          <p className="text-gray-600 mt-1 text-sm sm:text-base">
+            Make confident choices and discover the best solutions.
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {relatedProducts.map((product, index) => (
+          <div
+            key={product.id}
+            onClick={() => navigate(`/product/${product.slug}`)}
+            className="cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-md transition transform hover:-translate-y-1"
+          >
+            <div className="relative">
+              <img
+                src={product.heroImage}
+                alt={product.title}
+                className="w-full h-56 object-cover rounded-t-2xl"
+              />
+              <span className="absolute bottom-2 right-3 bg-white rounded-xl px-3 py-1 text-sm font-semibold shadow">
+                {String(index + 1).padStart(2, "0")}/
+                {String(relatedProducts.length).padStart(2, "0")}
+              </span>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold text-gray-800 text-base sm:text-lg">
+                {product.title}
+              </h3>
+              <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                {product.shortDescription}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ✅ Main Product Detail Page
 export default function ProductDetail() {
-  useEffect(() => {
-    Aos.init({ duration: 300, once: true });
-  }, []);
   const { slug } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    Aos.init({ duration: 300, once: true });
+  }, []);
 
   useEffect(() => {
     const found = productsData.find((p) => p.slug === slug);
@@ -57,6 +122,7 @@ export default function ProductDetail() {
         ← Back
       </button>
 
+      {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* LEFT IMAGE GALLERY */}
         <div
@@ -94,10 +160,7 @@ export default function ProductDetail() {
             <div className="text-sm text-teal-600 font-medium">
               {product.category}
             </div>
-            <h1
-              data-aos="fade-left"
-              className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2"
-            >
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">
               {product.title}
             </h1>
             <p className="mt-4 text-gray-600">{product.shortDescription}</p>
@@ -146,6 +209,12 @@ export default function ProductDetail() {
           )}
         </div>
       </div>
+
+      {/* ✅ RECOMMENDATION SECTION */}
+      <RecommendationSection
+        currentProduct={product}
+        allProducts={productsData}
+      />
     </div>
   );
 }
