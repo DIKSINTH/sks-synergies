@@ -1,7 +1,14 @@
 import React from "react";
 import sample from "../../../public/images/sample.jpg";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CompanyShowcase = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true });
+    AOS.refresh();
+  }, []);
   return (
     // Set explicit white background and black text color globally for this component
     <div className="font-sans bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8">
@@ -11,7 +18,10 @@ const CompanyShowcase = () => {
           {/* Text Content */}
           <div className="lg:w-1/2 mb-8 lg:mb-0">
             {/* Heading remains black/dark gray */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+            <h1
+              data-aos="fade-right"
+              className="text-4xl ssm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight"
+            >
               Lorem ipsum dolor sit. <br />
               {/* Blue accent color retained for the number */}
               <span className="text-blue-600">Lorem ipsum dolor sit.</span>{" "}
@@ -20,7 +30,10 @@ const CompanyShowcase = () => {
             </h1>
 
             {/* Body text updated to a standard Lorem Ipsum block */}
-            <p className="mt-6 text-base text-gray-700 max-w-xl">
+            <p
+              className="mt-6 text-base text-gray-700 max-w-xl"
+              data-aos="fade-right"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -32,7 +45,7 @@ const CompanyShowcase = () => {
           </div>
 
           {/* Image (Placeholder) */}
-          <div className="lg:w-1/2 w-full">
+          <div className="lg:w-1/2 w-full" data-aos="fade-left">
             {/* Retaining the gray/grayscale industrial image style */}
             <div
               className="w-full h-80 sm:h-96 bg-gray-200 rounded-lg overflow-hidden shadow-xl"
@@ -51,7 +64,10 @@ const CompanyShowcase = () => {
 
         {/* Bottom Section: Stats Grid */}
         <div className="mt-16">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4 text-center">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4 text-center"
+          >
             {/* Stat 1: Successful projects */}
             <div className="flex flex-col items-center">
               <p className="text-4xl sm:text-5xl font-extrabold text-blue-600">
