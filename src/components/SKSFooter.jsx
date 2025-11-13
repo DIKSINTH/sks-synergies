@@ -121,13 +121,13 @@ const SKSFooter = () => {
                 href="tel:+6584963414"
                 className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
-                +65 8496 3414
+                +91 9655272707
               </a>
               <a
                 href="mailto:sales@sks-synergies.com"
                 className="text-gray-600 hover:text-blue-900 transition-colors duration-200"
               >
-                sales@sks-synergies.com
+                letstalk@skssynergies.com
               </a>
             </div>
           </div>
@@ -138,8 +138,8 @@ const SKSFooter = () => {
               {/* Invisible header to align with "Let's connect" for desktop, but hidden on mobile */}
             </h3>
             <address className="not-italic text-gray-600">
-              NO-5 Soon Lee St, #03-6 Pioneer Point, <br />
-              lorem - 627607.
+              4th main road, Thiruvanmiyur, chennai.
+              <br />
             </address>
           </div>
         </div>
