@@ -147,7 +147,7 @@ const SKSFooter = () => {
         {/* Bottom Section: Copyright and Created By */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 text-sm text-gray-500">
           <p className="mb-2 sm:mb-0">
-            Copyright &copy; 2024 SKS Synergies. All rights reserved.
+            Copyright &copy; 2025 SKS Synergies. All rights reserved.
           </p>
           <p>
             Created by{" "}
