@@ -4,7 +4,7 @@ import productsData from "../../data/products.json";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-// ✅ Small reusable row component
+// Small reusable row component
 function KeyValueRow({ label, value }) {
   return (
     <div className="flex justify-between border-b border-gray-100 py-2 text-sm">
@@ -14,13 +14,12 @@ function KeyValueRow({ label, value }) {
   );
 }
 
-// ✅ Recommendation Section
+// Recommendation Section
 function RecommendationSection({ currentProduct, allProducts }) {
   const navigate = useNavigate();
 
   if (!currentProduct || !Array.isArray(allProducts)) return null;
 
-  // Filter same category but exclude the current product
   const relatedProducts = allProducts.filter(
     (p) => p.category === currentProduct.category && p.id !== currentProduct.id
   );
@@ -76,7 +75,6 @@ function RecommendationSection({ currentProduct, allProducts }) {
   );
 }
 
-// ✅ Main Product Detail Page
 export default function ProductDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -114,107 +112,113 @@ export default function ProductDetail() {
     : [product.heroImage];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-12">
-      <button
-        onClick={() => navigate(-1)}
-        className="text-sm text-gray-600 mb-6 flex items-center gap-2"
-      >
-        ← Back
-      </button>
-
-      {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        {/* LEFT IMAGE GALLERY */}
-        <div
-          data-aos="fade-right"
-          className="lg:sticky lg:top-24 lg:self-start"
+    <div className="min-h-screen bg-gray-50 py-8 px-4">
+      {/* ✅ NEW WRAPPER TO CENTER EVERYTHING */}
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-12">
+        <button
+          onClick={() => navigate(-1)}
+          className="text-sm text-gray-600 mb-6 flex items-center gap-2"
         >
-          <div className="bg-white p-4 rounded-2xl shadow-sm">
-            <img
-              src={gallery[activeIndex]}
-              alt={product.title}
-              className="w-full h-80 sm:h-96 object-cover rounded-xl"
-            />
+          ← Back
+        </button>
 
-            <div className="flex gap-3 mt-4 overflow-x-auto">
-              {gallery.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`rounded-md overflow-hidden border flex-shrink-0 ${
-                    index === activeIndex
-                      ? "ring-2 ring-teal-500"
-                      : "border-transparent"
-                  }`}
-                >
-                  <img src={img} alt="" className="w-20 h-16 object-cover" />
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* LEFT IMAGE GALLERY */}
+          <div
+            data-aos="fade-right"
+            className="lg:sticky lg:top-24 lg:self-start"
+          >
+            <div className="bg-white p-4 rounded-2xl shadow-sm">
+              <img
+                src={gallery[activeIndex]}
+                alt={product.title}
+                className="w-full h-80 sm:h-96 object-cover rounded-xl"
+              />
 
-        {/* RIGHT DETAILS */}
-        <div data-aos="fade-left" className="space-y-8">
-          <div>
-            <div className="text-sm text-teal-600 font-medium">
-              {product.category}
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">
-              {product.title}
-            </h1>
-            <p className="mt-4 text-gray-600">{product.shortDescription}</p>
-          </div>
-
-          {product.keySpecifications && (
-            <div className="bg-white rounded-md p-5 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">Key Specifications</h3>
-              {Object.entries(product.keySpecifications).map(([key, val]) => (
-                <KeyValueRow key={key} label={key} value={val} />
-              ))}
-            </div>
-          )}
-
-          {product.features && (
-            <div className="bg-white rounded-md p-5 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">
-                Features & Benefits
-              </h3>
-              <ul className="space-y-2 text-gray-700">
-                {product.features.map((f, i) => (
-                  <li key={i} className="flex gap-2">
-                    ✅ {f}
-                  </li>
+              <div className="flex gap-3 mt-4 overflow-x-auto">
+                {gallery.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`rounded-md overflow-hidden border flex-shrink-0 ${
+                      index === activeIndex
+                        ? "ring-2 ring-teal-500"
+                        : "border-transparent"
+                    }`}
+                  >
+                    <img src={img} alt="" className="w-20 h-16 object-cover" />
+                  </button>
                 ))}
-              </ul>
+              </div>
             </div>
-          )}
+          </div>
 
-          {product.construction && (
-            <div className="bg-white rounded-md p-5 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">Construction</h3>
-              {Object.entries(product.construction).map(([key, val]) => (
-                <KeyValueRow key={key} label={key} value={val} />
-              ))}
+          {/* RIGHT DETAILS */}
+          <div data-aos="fade-left" className="space-y-8">
+            <div>
+              <div className="text-sm text-teal-600 font-medium">
+                {product.category}
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">
+                {product.title}
+              </h1>
+              <p className="mt-4 text-gray-600">{product.shortDescription}</p>
             </div>
-          )}
 
-          {product.performance && (
-            <div className="bg-white rounded-md p-5 shadow-sm">
-              <h3 className="font-semibold text-lg mb-3">Performance</h3>
-              {Object.entries(product.performance).map(([key, val]) => (
-                <KeyValueRow key={key} label={key} value={val} />
-              ))}
-            </div>
-          )}
+            {product.keySpecifications && (
+              <div className="bg-white rounded-md p-5 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3">
+                  Key Specifications
+                </h3>
+                {Object.entries(product.keySpecifications).map(([key, val]) => (
+                  <KeyValueRow key={key} label={key} value={val} />
+                ))}
+              </div>
+            )}
+
+            {product.features && (
+              <div className="bg-white rounded-md p-5 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3">
+                  Features & Benefits
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  {product.features.map((f, i) => (
+                    <li key={i} className="flex gap-2">
+                      ✅ {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {product.construction && (
+              <div className="bg-white rounded-md p-5 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3">Construction</h3>
+                {Object.entries(product.construction).map(([key, val]) => (
+                  <KeyValueRow key={key} label={key} value={val} />
+                ))}
+              </div>
+            )}
+
+            {product.performance && (
+              <div className="bg-white rounded-md p-5 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3">Performance</h3>
+                {Object.entries(product.performance).map(([key, val]) => (
+                  <KeyValueRow key={key} label={key} value={val} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* ✅ RECOMMENDATION SECTION */}
-      <RecommendationSection
-        currentProduct={product}
-        allProducts={productsData}
-      />
+        {/* Recommendation Section */}
+        <RecommendationSection
+          currentProduct={product}
+          allProducts={productsData}
+        />
+      </div>
+      {/* END CENTER WRAPPER */}
     </div>
   );
 }
